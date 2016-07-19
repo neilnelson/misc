@@ -1,0 +1,43 @@
+#### Wide System Design
+
+##### Mic and Audio Receiver/Encoder
+
+This area:
+
+* Converts the speaker's audio into an electronic waveform (a mic),
+* Extracts the speech portion embedded in non-speech audio,
+* Packages the selected audio in a format (wav, flac, mp3, etc), and
+* Transmits the audio file to a recognizer.
+
+Sometimes the audio may be sent directly to the recognizer via a function call or it may be sent over the Internet to a server that relays it to the recognizer. It may be the case that the audio is merely received at the server without knowing how it was obtained before that point.
+
+We are currently using the Python speech_recognition module to connect to the mic, and select and format the audio.
+
+We currently have:
+
+* Mic audio selected and formatted to flac and wav and then via a function call sent to the PocketShinx recognizer,
+* Mic audio selected and formatted to flac and transmitted to the Google recognizer over the Internet.
+
+I can envision the following:
+
+* Android cell-phone audio extracted by Java in the manner of the current Python speech_recognition/__init__.py and sent to a server that contains the recognizer or relays the audio to a server, such as Google, that performs the recognition. It may also be the case that the audio is sent raw without selection to the server that then does the selection.
+* HTML5 audio obtained through a web-page and sent to a server for selection and recognition. Whether or not javascript could be used to select the audio portion is something to consider.
+* How many other ways can audio be captured and handed to a recognizer?
+
+##### Speech Recognizer
+
+This area receives an audio file (possibly a stream but unlikely at the moment) and translates the audio to text.
+
+We are currently using:
+
+* Google, where we send the audio over the Internet and receive back a translation. This option allows only a limited use withot further coordination and possibly payment to Google. And
+* PocketSphinx, where we give the audio to a local recognizer.
+
+I can envision the following:
+
+* It could well be the case that other recognizers could be used as seen in Jasper. The utility of including those recognizers needs to be evaluated. These are in general paid recognizers. It may be useful to allow the user to select a recognizer that would work best for the user's purpose, and then we would be working to streamlining the connection of that recognizer to our system.
+* A server can be assembled with, for example, the Kaldi recognizer. We also have PocketSphinx, Sphinx, and HTK for possible use.
+* Another area of interest would be to have recognizers that work for foreign languages.
+
+
+[Complete Installation Guide for Android SDK / ADT Bundle on Ubuntu](http://askubuntu.com/questions/318246/complete-installation-guide-for-android-sdk-adt-bundle-on-ubuntu)
