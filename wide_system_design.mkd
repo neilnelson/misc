@@ -1,6 +1,6 @@
 #### Wide System Design
 
-![System Chart](system_chart.pdf)
+![System Chart](system_chart.png)
 
 ##### Mic and Audio Receiver/Encoder
 
