@@ -1,2 +1,2 @@
 # misc
-A place to put miscellaneous for others to obtain
+A place to put miscellaneous items for others to obtain
