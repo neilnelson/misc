@@ -30,9 +30,11 @@ I can envision the following:
 
 This area receives an audio file (possibly a stream but unlikely at the moment) and translates the audio to text.
 
+A key division in recognizer capability is whether or not the recognizer will only work well on a relatively small list of phrases or whether the recognizer will work well on general speech by most people of a language.
+
 We are currently using:
 
-* Google, where we send the audio over the Internet and receive back a translation. This option allows only a limited use withot further coordination and possibly payment to Google. And
+* Google, where we send the audio over the Internet and receive back a translation. This option allows only a limited use without further coordination and possibly payment to Google. And
 * PocketSphinx, where we give the audio to a local recognizer.
 
 I can envision the following:
@@ -40,3 +42,34 @@ I can envision the following:
 * It could well be the case that other recognizers could be used as seen in Jasper. The utility of including those recognizers needs to be evaluated. These are in general paid recognizers. It may be useful to allow the user to select a recognizer that would work best for the user's purpose, and then we would be working to streamlining the connection of that recognizer to our system.
 * A server can be assembled with, for example, the Kaldi recognizer. We also have PocketSphinx, Sphinx, and HTK for possible use.
 * Another area of interest would be to have recognizers that work for foreign languages.
+
+##### Translate Text to Action Instruction
+
+This area receives the text from a(n):
+
+* Recognizer,
+* Keyboard,
+* SMS,
+* Web-page entry or click,
+* Local GUI entry or click, or
+* Other not yet considered.
+
+And converts the input to an action instruction.
+
+In some cases the text or symbols received may need to be translated to words this translator takes as imput such as in the cases of SMS and foreign language text.
+
+##### Action Instruction Routing
+
+An action might take place at a wide variety of locations and the purpose of this area is to route the action instruction and any related data to where the action will be performed.
+
+In many cases the action instruction will be returned to the device from which the initial instruction was received such as when text for text-to-speech is returned for the device to create the audio. Or it may be that the action will be performed immediately and the result of that returned such as audio from text-to-speech given back to the device that might be in the cell-phone case. 
+
+The _Possible Routing Info_ may be a return address from a device on which the action instruction should be returned for execution. Or it may be a routing for additional processing to another node where the instruction packet may contain data or parameters for processing.
+
+##### Perform the Action
+
+An action will be to perform some function, run a program, send to a server and receive a result, or similar. The result of the action may be text, audio, a web-page, an update to a database, or similar.
+
+##### Return the Results
+
+The action results may be returned direclty, or expressed directly on the device, or some indication that the action had been completed. Where the action produces text to be converted to audio (TTS) the return is split with text going to a TTS and then on to the user. We might also think of the TTS portion as being with the action processing. But in any case we would expect in the common case for a user request to be returned with some kind of confirmation.
