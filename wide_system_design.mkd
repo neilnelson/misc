@@ -40,6 +40,3 @@ I can envision the following:
 * It could well be the case that other recognizers could be used as seen in Jasper. The utility of including those recognizers needs to be evaluated. These are in general paid recognizers. It may be useful to allow the user to select a recognizer that would work best for the user's purpose, and then we would be working to streamlining the connection of that recognizer to our system.
 * A server can be assembled with, for example, the Kaldi recognizer. We also have PocketSphinx, Sphinx, and HTK for possible use.
 * Another area of interest would be to have recognizers that work for foreign languages.
-
-
-[Complete Installation Guide for Android SDK / ADT Bundle on Ubuntu](http://askubuntu.com/questions/318246/complete-installation-guide-for-android-sdk-adt-bundle-on-ubuntu)
