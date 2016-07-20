@@ -1,24 +1,31 @@
-#### Action Module Specification
+### Action Module Specification
 
-![Action Module Layout](action_module_layout.png)
+#### Action Module Layout
 
-##### Classification Keywords
+* [Classification Keywords](#Classification Keywords)
+* [Installation Documentation](#Installation Documentation)
+* [Usage Documentation](#Usage Documentation)
+* [GUI Specification](#GUI Specification)
+* [Action Phrases](#Action Phrases)
+* [Function Code](#Function Code)
+
+#### <a name="Classification Keywords">Classification Keywords</a>
 
 These are keywords used to group this action module into an application area. This is a formatted item that allows easy extraction for automated use.
 
-##### Installation Documentation
+#### <a name="Installation Documentation">Installation Documentation</a>
 
 This is a text area, or possibly formatted for automatic use, giving installation instructions. The idea is that the installation instructions can be provided on a GUI and possibly automated to some degree.
 
-##### Usage Documentation
+#### <a name="Usage Documentation">Usage Documentation</a>
 
 This is a text area describing how the action module works and is used. The text can be provided on a GUI as help for the user.
 
-##### GUI Specification
+#### <a name="GUI Specification">GUI Specification</a>
 
 The GUI specification gives a layout and instructions for how this action module should appear on a GUI. It may contain URLs to obtain data as in the music and pictures case. It may have a layout specification for lists (or other) such as for music and pictures. It may have a URL to obtain icons or pictures.
 
-##### Action Phrases
+#### <a name="Action Phrases">Action Phrases</a>
 
 This is an expanded version of the current WORDS constant. The phrases in the current user_queries.txt will be put here with additional code needed elsewhere for their extraction and use. The user_queries.txt file will no longer be used.
 
@@ -26,6 +33,6 @@ This area will likely evolve into a GUI updated SQLite DB of phrases that can be
 
 An action phrase ID may be needed to allow a specific selection of an action when a different user langauge is used. Otherwise, getting a specific translation to the action module may not be easy to implement.
 
-##### Function Code
+#### <a name="Function Code">Function Code</a>
 
 This is the current function code area. It may be the case that the function code will be translated to another language such as Java for android use. How those translations will be coordinated needs further thought.
