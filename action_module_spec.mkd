@@ -2,18 +2,13 @@
 
 ![Action Module Layout](action_module_layout.png)
 
-The action module should contain all the info or links to it for what the module does, how it is to be used, and GUI formatting and use.
-
-* GUI formatting will be in a language that can be translated for the particular implementation language.
-* It may be useful to have documentation in the action module for its installation and use. Having a standard format for installation and use could be automated for GUI implementation.
-
 ##### Classification Keywords
 
 These are keywords used to group this action module into an application area. This is a formatted item that allows easy extraction for automated use.
 
 ##### Installation Documentation
 
-This is a text area, or possibly formatted for automatic use, giving installation instructions. The idea is that the installation instructions can be provided on a GUI and that they can be automated to some degree.
+This is a text area, or possibly formatted for automatic use, giving installation instructions. The idea is that the installation instructions can be provided on a GUI and possibly automated to some degree.
 
 ##### Usage Documentation
 
@@ -21,13 +16,15 @@ This is a text area describing how the action module works and is used. The text
 
 ##### GUI Specification
 
-The GUI specification gives a layout and instructions for how this action module should appear on a GUI. It may contain urls to obtain data as in the music and pictures case. It may have a layout specification for lists such as for music and pictures. It may have a URL to obtain icons or pictures.
+The GUI specification gives a layout and instructions for how this action module should appear on a GUI. It may contain URLs to obtain data as in the music and pictures case. It may have a layout specification for lists (or other) such as for music and pictures. It may have a URL to obtain icons or pictures.
 
 ##### Action Phrases
 
-This is an expanded version of the current WORDS constant. The phrases in the current user_queries.txt will be put here with additional code for their extraction and use. The user_queries.txt file will no longer be used.
+This is an expanded version of the current WORDS constant. The phrases in the current user_queries.txt will be put here with additional code needed elsewhere for their extraction and use. The user_queries.txt file will no longer be used.
 
 This area will likely evolve into a GUI updated SQLite DB of phrases that can be maintained by the user or where phrases in different languages can be provided depending on the SQLite DB selected during installation.
+
+An action phrase ID may be needed to allow a specific selection of an action when a different user langauge is used. Otherwise, getting a specific translation to the action module may not be easy to implement.
 
 ##### Function Code
 
